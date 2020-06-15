@@ -1,13 +1,19 @@
 # dsa-stack-and-queue
 
 - Stack
-- ParenthesesStack
+  - Helper
+    - peek
+    - isEmpty
+    - display
+    - remove
+  - Node
+  - Main
+  - Matchingparentheses
+  - ParenthesesStack
 - Queue
-- Node
-- Main
-- Helper
   - peek
   - isEmpty
   - display
-  - remove
-- Matchingparentheses
+- StackAndQueue
+  - Main
+  - StackAndQueue
