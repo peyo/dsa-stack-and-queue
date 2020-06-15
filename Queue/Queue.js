@@ -6,6 +6,7 @@ class Queue {
     this.last = null;
   };
 
+  // Add to the back of the queue.
   enqueue(data) {
     const node = new _Node(data);
 
@@ -17,10 +18,11 @@ class Queue {
       this.last.next = node;
     }
 
-    //make the new node the last item on the queue
+    // Make the new node the last item on the queue
     this.last = node;
   };
 
+  // Remove from the front of the queue.
   dequeue() {
     if (this.first === null) {
       return;
