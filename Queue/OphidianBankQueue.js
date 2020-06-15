@@ -1,12 +1,11 @@
 const _Node = require("./Node");
 
-class Queue {
+class Ophidian {
   constructor() {
     this.first = null;
     this.last = null;
-  };
+  }
 
-  // Add to the back of the queue.
   enqueue(data) {
     const node = new _Node(data);
 
@@ -18,12 +17,34 @@ class Queue {
       this.last.next = node;
     }
 
-    // Make the new node the last item on the queue
     this.last = node;
+  }
+
+  dequeue() {
+    let random = Math.random();
+    if (random < .25) {
+      this.dequeue1();
+    } else { 
+      this.dequeue2();
+    }
+  }
+
+  dequeue1() {
+    if (this.first === null) {
+      return;
+    }
+
+    const node = this.first;
+    this.first = this.first.next;
+
+    if (node === this.last) {
+      return;
+    }
+
+    this.enqueue(node.data);
   };
 
-  // Remove from the front of the queue.
-  dequeue() {
+  dequeue2() {
     if (this.first === null) {
       return;
     }
@@ -39,4 +60,4 @@ class Queue {
   }
 }
 
-module.exports = Queue
+module.exports = Ophidian;
